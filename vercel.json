@@ -11,7 +11,13 @@
       "dest": "/index.php"
     }
   ],
-  "env": {
-    "VERCEL": "true"
+  "build": {
+    "env": {
+      "COMPOSER_ALLOW_SUPERUSER": "1"
+    },
+    "commands": [
+      "curl -sS https://getcomposer.org/installer | php",
+      "php composer.phar install"
+    ]
   }
 }
