@@ -2,10 +2,7 @@
   "builds": [
     {
       "src": "index.php",
-      "use": "@vercel/php",
-      "config": {
-        "maxLambdaSize": "50mb"
-      }
+      "use": "@vercel/php"
     }
   ],
   "routes": [
@@ -14,7 +11,7 @@
       "dest": "/index.php"
     }
   ],
-  "scripts": {
-    "build": "composer install"
+  "env": {
+    "VERCEL": "true"
   }
 }
